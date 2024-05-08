@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculation using JS</title>
+  </head>
+  <body>
+    <div>
+        <label for="num1">Number 1</label>
+        <input placeholder="Number 1" id="num1" />
+        <label for="num2">Number 2</label>
+        <input placeholder="Number 2" id="num2" />
+        <button onClick="calculateSum()">Add Number 1 and Number 2</button>
+        <p id="calculatorOutput"></p>
+    </div>
+
+    <script type="text/javascript">
+        function calculateSum() {
+            var inputs = document.querySelectorAll("input");
+            var addend1 = inputs[0].value;
+            var addend2 = inputs[1].value;
+            var sum = parseInt(addend1) + parseInt(addend2);
+            var label = document.getElementById("calculatorOutput");
+            label.textContent = addend1 + " + " + addend2 + " = " + sum;
+        }
+    </script>
+  </body>
+</html>
